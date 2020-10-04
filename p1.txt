@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+#include <bits/stdc++.h>
+int main()
+{
+  
+    long long t;
+    cin >> t;
+    while (t--)
+    {
+       long long n,x,k,y;
+        cin >> n >>k>>x>>y;
+
+      bool arr[n]={0};
+      long long i=(x+k)%n;
+      arr[x] = 1;
+      while ((i % n) != x)
+{
+    arr[i % n] = 1;
+    i += k;
+
+
+}
+if(arr[y]==1)
+    cout <<"YES"<<"\n ";
+        else
+            cout <<"NO"
+                 << "\n";
+    }
+        return 0;
+    }
